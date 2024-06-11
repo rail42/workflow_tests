@@ -4,6 +4,6 @@ import rng
 class TestRng(unittest.TestCase):
     
     def test_rng(self):
-        rng.max_number = 345
-        rng.min_number = 5
-        self.assertTrue(998 <= rng.rnd_number <= 1000)
+        result = rng.randomFromRange(324, 1000)
+        self.assertNotEqual(-1)
+        self.assertTrue(324 <= result <= 1000)
